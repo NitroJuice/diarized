@@ -1,4 +1,4 @@
-# Audio Diarization Script
+# Audio Diarization
 
 This Python script performs speaker diarization on audio files (e.g., MP3 or WAV). It uses OpenAI's Whisper for speech transcription, SpeechBrain for speaker embedding extraction, and KMeans clustering to assign speakers to transcription segments. The result is a formatted text file with transcribed text, timestamps, and speaker labels.
 
@@ -24,7 +24,7 @@ Ensure FFmpeg is installed (e.g., `brew install ffmpeg` on macOS or `apt install
 Run the script from the command line:
 
 ```
-python script.py <audio_file> [--speakers N] [-o output_file]
+python diarize.py <audio_file> [--speakers N] [-o output_file]
 ```
 
 - `<audio_file>`: Path to the input audio file (required, e.g., `path/to/audio.mp3`).
@@ -34,17 +34,17 @@ python script.py <audio_file> [--speakers N] [-o output_file]
 ### Examples
 - Basic run (auto-detect speakers, default output):
   ```
-  python script.py path/to/audio.mp3
+  python diarize.py path/to/audio.mp3
   ```
 
 - Specify 2 speakers and custom output:
   ```
-  python script.py path/to/audio.mp3 --speakers 2 -o results.txt
+  python diarize.py path/to/audio.mp3 --speakers 2 -o results.txt
   ```
 
 - Auto-detect speakers with custom output:
   ```
-  python script.py path/to/audio.wav -o my_transcript.txt
+  python diarize.py path/to/audio.wav -o my_transcript.txt
   ```
 
 ## Output
