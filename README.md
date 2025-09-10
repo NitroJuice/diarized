@@ -1,4 +1,4 @@
-# Audio Diarization
+# AI Audio Diarization
 
 This Python script performs speaker diarization on audio files (e.g., MP3 or WAV). It uses OpenAI's Whisper for speech transcription, SpeechBrain for speaker embedding extraction, and KMeans clustering to assign speakers to transcription segments. The result is a formatted text file with transcribed text, timestamps, and speaker labels.
 
